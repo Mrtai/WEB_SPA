@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -67,11 +68,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\productLoad.css" />
-    <Content Include="user\products\productsLoad.aspx" />
+    <Content Include="user\home\Home.aspx" />
     <Content Include="Web.config" />
     <Content Include="admin\home\WebAdmin.aspx" />
     <Content Include="user\home\WebUser.aspx" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +83,13 @@
     <Compile Include="admin\home\WebAdmin.aspx.designer.cs">
       <DependentUpon>WebAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user\home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\home\WebUser.aspx.cs">
       <DependentUpon>WebUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -89,16 +97,24 @@
     <Compile Include="user\home\WebUser.aspx.designer.cs">
       <DependentUpon>WebUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\products\productsLoad.aspx.cs">
-      <DependentUpon>productsLoad.aspx</DependentUpon>
+    <Compile Include="user\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\products\productsLoad.aspx.designer.cs">
-      <DependentUpon>productsLoad.aspx</DependentUpon>
+    <Compile Include="user\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="user\MasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +127,9 @@
     <Folder Include="admin\products\" />
     <Folder Include="admin\schedule\" />
     <Folder Include="admin\service\" />
-    <Folder Include="JavaScript\" />
+    <Folder Include="user\image\" />
     <Folder Include="user\login\" />
+    <Folder Include="user\products\" />
     <Folder Include="user\schedule\" />
     <Folder Include="user\service\" />
   </ItemGroup>
