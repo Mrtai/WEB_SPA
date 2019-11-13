@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\productLoad.css" />
+    <Content Include="user\products\productsLoad.aspx" />
     <Content Include="Web.config" />
     <Content Include="admin\home\WebAdmin.aspx" />
     <Content Include="user\home\WebUser.aspx" />
@@ -87,6 +89,13 @@
     <Compile Include="user\home\WebUser.aspx.designer.cs">
       <DependentUpon>WebUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user\products\productsLoad.aspx.cs">
+      <DependentUpon>productsLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\products\productsLoad.aspx.designer.cs">
+      <DependentUpon>productsLoad.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -102,8 +111,8 @@
     <Folder Include="admin\products\" />
     <Folder Include="admin\schedule\" />
     <Folder Include="admin\service\" />
+    <Folder Include="JavaScript\" />
     <Folder Include="user\login\" />
-    <Folder Include="user\products\" />
     <Folder Include="user\schedule\" />
     <Folder Include="user\service\" />
   </ItemGroup>
