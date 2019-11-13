@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebSpa</RootNamespace>
     <AssemblyName>WebSpa</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,23 +45,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DAL\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -68,11 +75,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="user\css\base.css" />
-    <Content Include="user\css\grid.css" />
-    <Content Include="user\css\layout.css" />
-    <Content Include="user\css\style.css" />
     <Content Include="user\home\Home.aspx" />
+    <Content Include="CSS\productLoad.css" />
+    <Content Include="resource\ImageProduct\eucerin-Kem-CKĐ-eucerin-e1544608223981-500x500.jpg" />
+    <Content Include="resource\ImageProduct\eucerin-Kem-đặc-tri-mụn-e1544607546343-500x500.png" />
+    <Content Include="resource\ImageProduct\eucerin-Kiểm-soát-nhờn-e1544608643841-500x500.jpg" />
+    <Content Include="resource\ImageProduct\Eucerin-Nước-hoa-hồng-e1544671167538-500x500.jpg" />
+    <Content Include="resource\ImageProduct\Eucerin-tinh-chất-trị-mụn-e1544673241822-500x500.jpg" />
+    <Content Include="resource\ImageProduct\Eucerin-TTBC-e1544672702328-500x500.jpg" />
+    <Content Include="resource\ImageProduct\kem-chong-nang-e1544608368933-500x500.png" />
+    <Content Include="resource\ImageProduct\SRM-Eucerin-1-1-e1544607859868-500x500.jpg" />
+    <Content Include="user\products\SanPhamList.aspx" />
     <Content Include="Web.config" />
     <Content Include="admin\home\WebAdmin.aspx" />
     <Content Include="user\home\WebUser.aspx" />
@@ -115,6 +128,13 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user\products\SanPhamList.aspx.cs">
+      <DependentUpon>SanPhamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\products\SanPhamList.aspx.designer.cs">
+      <DependentUpon>SanPhamList.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -133,7 +153,6 @@
     <Folder Include="admin\service\" />
     <Folder Include="user\image\" />
     <Folder Include="user\login\" />
-    <Folder Include="user\products\" />
     <Folder Include="user\schedule\" />
     <Folder Include="user\service\" />
   </ItemGroup>
