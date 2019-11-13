@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DAL\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -71,10 +79,21 @@
     <Content Include="CSS\layout.css" />
     <Content Include="CSS\productLoad.css" />
     <Content Include="user\contact\contact.aspx" />
-    <Content Include="user\products\productsLoad.aspx" />
+    <Content Include="user\home\Home.aspx" />
+    <Content Include="resource\ImageProduct\eucerin-Kem-CKĐ-eucerin-e1544608223981-500x500.jpg" />
+    <Content Include="resource\ImageProduct\eucerin-Kem-đặc-tri-mụn-e1544607546343-500x500.png" />
+    <Content Include="resource\ImageProduct\eucerin-Kiểm-soát-nhờn-e1544608643841-500x500.jpg" />
+    <Content Include="resource\ImageProduct\Eucerin-Nước-hoa-hồng-e1544671167538-500x500.jpg" />
+    <Content Include="resource\ImageProduct\Eucerin-tinh-chất-trị-mụn-e1544673241822-500x500.jpg" />
+    <Content Include="resource\ImageProduct\Eucerin-TTBC-e1544672702328-500x500.jpg" />
+    <Content Include="resource\ImageProduct\kem-chong-nang-e1544608368933-500x500.png" />
+    <Content Include="resource\ImageProduct\SRM-Eucerin-1-1-e1544607859868-500x500.jpg" />
+    <Content Include="user\products\SanPhamList.aspx" />
+
     <Content Include="Web.config" />
     <Content Include="admin\home\WebAdmin.aspx" />
     <Content Include="user\home\WebUser.aspx" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +110,13 @@
     </Compile>
     <Compile Include="user\contact\contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    <Compile Include="user\home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+
     </Compile>
     <Compile Include="user\home\WebUser.aspx.cs">
       <DependentUpon>WebUser.aspx</DependentUpon>
@@ -99,16 +125,33 @@
     <Compile Include="user\home\WebUser.aspx.designer.cs">
       <DependentUpon>WebUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\products\productsLoad.aspx.cs">
-      <DependentUpon>productsLoad.aspx</DependentUpon>
+
+    <Compile Include="user\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\products\productsLoad.aspx.designer.cs">
-      <DependentUpon>productsLoad.aspx</DependentUpon>
+    <Compile Include="user\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+
+    <Compile Include="user\products\SanPhamList.aspx.cs">
+      <DependentUpon>SanPhamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\products\SanPhamList.aspx.designer.cs">
+      <DependentUpon>SanPhamList.aspx</DependentUpon>
+
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="user\MasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,8 +164,9 @@
     <Folder Include="admin\products\" />
     <Folder Include="admin\schedule\" />
     <Folder Include="admin\service\" />
-    <Folder Include="JavaScript\" />
+    <Folder Include="user\image\" />
     <Folder Include="user\login\" />
+    <Folder Include="user\products\" />
     <Folder Include="user\schedule\" />
     <Folder Include="user\service\" />
   </ItemGroup>

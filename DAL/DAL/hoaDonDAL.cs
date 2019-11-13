@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DAL
 {
-    class hoaDonDAL
+    public class hoaDonDAL
     {
         private DB_SPAEntities context = new DB_SPAEntities();
         public int Add(HOA_DON p)

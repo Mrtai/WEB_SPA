@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DAL
 {
-    class nhanVienDAL
+    public class nhanVienDAL
     {
         private DB_SPAEntities context = new DB_SPAEntities();
         public int Add(NHAN_VIEN p)

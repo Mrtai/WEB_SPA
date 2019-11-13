@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DAL
 {
-    class dichVuDAL
+    public class dichVuDAL
     {
         private DB_SPAEntities context = new DB_SPAEntities();
         public int Add(DICH_VU p)
