@@ -67,7 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\grid.css" />
+    <Content Include="CSS\layout.css" />
     <Content Include="CSS\productLoad.css" />
+    <Content Include="user\contact\contact.aspx" />
     <Content Include="user\products\productsLoad.aspx" />
     <Content Include="Web.config" />
     <Content Include="admin\home\WebAdmin.aspx" />
@@ -81,6 +84,13 @@
     </Compile>
     <Compile Include="admin\home\WebAdmin.aspx.designer.cs">
       <DependentUpon>WebAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\contact\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\contact\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\home\WebUser.aspx.cs">
       <DependentUpon>WebUser.aspx</DependentUpon>
