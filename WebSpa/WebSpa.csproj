@@ -110,6 +110,7 @@
     </Compile>
     <Compile Include="user\contact\contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\home\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +140,7 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
 
     <Compile Include="user\products\SanPhamList.aspx.cs">
       <DependentUpon>SanPhamList.aspx</DependentUpon>
@@ -146,7 +148,6 @@
     </Compile>
     <Compile Include="user\products\SanPhamList.aspx.designer.cs">
       <DependentUpon>SanPhamList.aspx</DependentUpon>
-
     </Compile>
   </ItemGroup>
   <ItemGroup>
