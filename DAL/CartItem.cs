@@ -12,13 +12,15 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class NHAN_VIEN
+    public partial class CartItem
     {
-        public int MA_NV { get; set; }
-        public string USERNAME { get; set; }
-        public string PASSWORD { get; set; }
-        public Nullable<int> TRANGTHAI { get; set; }
-        public string TEN_NV { get; set; }
-        public string EMAIL { get; set; }
+        public int CartID { get; set; }
+        public Nullable<int> MA_KH { get; set; }
+        public Nullable<int> SoLuong { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
+        public Nullable<int> MA_SP { get; set; }
+    
+        public virtual KHACH_HANG KHACH_HANG { get; set; }
+        public virtual SAN_PHAM SAN_PHAM { get; set; }
     }
 }

@@ -37,6 +37,7 @@ namespace DAL.DAL
             SAN_PHAM k = context.SAN_PHAM.FirstOrDefault(m => m.MA_SP == pMa);
             context.SAN_PHAM.Remove(k);
             result = context.SaveChanges();
+
             return result;
         }
         public List<SAN_PHAM> GetList()
@@ -52,5 +53,7 @@ namespace DAL.DAL
             result = context.SAN_PHAM.FirstOrDefault(m => m.MA_SP == pMa);
             return result;
         }
+
+       
     }
 }

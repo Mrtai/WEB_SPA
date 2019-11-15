@@ -18,7 +18,7 @@ namespace DAL
         public int MA_KH { get; set; }
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
-        public byte TRANG_THAI { get; set; }
+        public Nullable<byte> TRANG_THAI { get; set; }
     
         public virtual KHACH_HANG KHACH_HANG { get; set; }
     }
