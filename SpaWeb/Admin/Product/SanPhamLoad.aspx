@@ -13,29 +13,58 @@
 </head>
 <body onload="document.form12.submit()">
     <form id="form1" runat="server" name="form12">
-         <div class="container">
-            <h2>Danh Sách Sản Phẩm</h2>
+         <div class="form-group container">
+            <h1 class="text-primary">Danh Sách Sản Phẩm</h1>
             <div>
-                <a class="btn btn-success text-center" href="AddSanPham.aspx" style="margin-bottom:30px">Tạo Mới</a>
-                <asp:Label runat="server" Text="value" ID="lb_messenger" Enabled="false" Visible="false" Font-Size="XX-Large" CssClass="text-center btn-success text-uppercase"></asp:Label>
+                <a class="btn btn-success text-center" href="AddSanPham.aspx" style="margin-bottom:30px; font-size:larger">Tạo Mới</a>
+                <asp:Label runat="server" Text="value" ID="lb_messenger"
+                    Visible="false"  CssClass="h3 text-success"></asp:Label>
             </div>
              <div class="table table-hover">
-                <asp:GridView CssClass="table table-hover" runat="server" ID="SanPhamLoadGrid" AutoGenerateColumns="False"
+                <asp:GridView CssClass="table table-hover table-condensed text-center" runat="server" ID="SanPhamLoadGrid" AutoGenerateColumns="False"
                     SelectMethod="SanPhamLoad_GetData">
-                    <Columns >
-                        <asp:BoundField DataField="MA_SP" HeaderText="ID" SortExpression="MA_SP"/>
-                        <asp:BoundField DataField="TEN_SP" HeaderText="Tên Sản Phẩm"/>
-                        <asp:BoundField DataField="MO_TA" HeaderText="Mô Tả" />
-                        
-                        <asp:BoundField DataField="GIA" HeaderText="Giá" />
-
-                      <asp:TemplateField HeaderText="Delete">
+                    <Columns>
+                       <asp:TemplateField HeaderText="ID" HeaderStyle-CssClass="h4 text-center">
                         <ItemTemplate>
-                          <img src ="../../Resource/image/<%# Eval("ANH") %>" />
+                            <div>
+                                <%# Eval("MA_SP") %>
+                            </div>
                         </ItemTemplate>
                       </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Chức Năng">
+                      <asp:TemplateField HeaderText="Tên Sản Phẩm" HeaderStyle-CssClass="h4 text-center" >
+                        <ItemTemplate>
+                            <div class="text-left">
+                                <%# Eval("TEN_SP") %>
+                            </div>
+                        </ItemTemplate>
+
+                      </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Mô Tả" HeaderStyle-CssClass="h4 text-center">
+                        <ItemTemplate>
+                            <div class="text-left">
+                                <%# Eval("MO_TA") %>
+                            </div>
+                        </ItemTemplate>
+                      </asp:TemplateField>
+                        
+                        <asp:TemplateField HeaderText="Giá" HeaderStyle-CssClass="h4 text-center">
+                        <ItemTemplate>
+                            <div>
+                                <%#String.Format("{0:c}" ,Eval("GIA")) %>
+                            </div>
+                        </ItemTemplate>
+                      </asp:TemplateField>
+
+                      <asp:TemplateField HeaderText="Ảnh Sản Phẩm" HeaderStyle-CssClass="h4 text-center">
+                        <ItemTemplate>
+                            <div >
+                                <img src ="../../Resource/image/<%# Eval("ANH") %>" class="img-responsive center-block" width="53" height="50"/>
+                            </div>
+                        </ItemTemplate>
+                      </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Chức Năng" HeaderStyle-CssClass="h4 text-center">
                             <ItemTemplate>
 
                                <a href="EditSamPham.aspx?MaSP=<%# Eval("MA_SP") %>" class="btn btn-warning" style="padding:10px">Cập Nhật</a>
@@ -50,15 +79,5 @@
             </div>
         </div>
     </form>
-
-
-    <script>
-        $(function () {
-            var successMessage = "value";
-            successMessage = document.getElementById("lb_messenger").value;
-            if (successMessage != 'value')
-                alertify.success(successMessage);
-        });
-    </script>
 </body>
 </html>

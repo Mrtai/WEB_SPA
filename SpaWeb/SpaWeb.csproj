@@ -242,7 +242,7 @@
     </Compile>
     <Compile Include="User\Contact\contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
-
+    </Compile>
     <Compile Include="User\Product\GioHang.aspx.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

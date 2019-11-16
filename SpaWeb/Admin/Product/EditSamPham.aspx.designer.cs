@@ -40,13 +40,13 @@ namespace SpaWeb.Admin.Product {
         protected global::System.Web.UI.WebControls.Label la;
         
         /// <summary>
-        /// txt_TenSP control.
+        /// txt_tenSP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_TenSP;
+        protected global::System.Web.UI.WebControls.TextBox txt_tenSP;
         
         /// <summary>
         /// Label2 control.
