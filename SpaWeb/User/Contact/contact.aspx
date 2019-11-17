@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="SpaWeb.User.Contact.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   
+    <h2><h2><%: Title %>.</h2></h2>
     <div id="main">
         <section class="main-title-section-wrapper default" style="">
             <div class="container">
@@ -60,5 +60,4 @@
         </div>
     </div>
     
-    </div>
 </asp:Content>
